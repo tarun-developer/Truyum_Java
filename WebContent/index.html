@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="ISO-8859-1">  
+<title>Servlet Login Example</title>  
+</head>  
+<body>  
+  
+<h1>Login App using HttpSession</h1>  
+<a href="login.html">Login</a>|  
+<a href="LogoutServlet" onclick="myFunction()">Logout</a>|  
+<a href="ProfileServlet">Profile</a>  
+  
+</body> 
+
+ <script type="text/javascript">
+function myFunction() {
+	  alert("I am an alert box!");
+	}
+	
+	
+	
+    $(document).ready(function() {
+        $("#loginForm").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+         
+                password: "required",
+            },
+             
+            messages: {
+                email: {
+                    required: "Please enter email",
+                    email: "Please enter a valid email address"
+                },
+                 
+                password: "Please enter password"
+            }
+        });
+ 
+    });
+</script>
+</html>  
